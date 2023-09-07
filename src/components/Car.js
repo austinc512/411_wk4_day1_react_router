@@ -18,7 +18,19 @@ const Car = (props) => {
 
   let chips = [];
   for (let property in car) {
-    chips.push(<Chip key={property} label={`${property}: ${car[property]}`} />);
+    if (property === "Name") {
+      let nameArr = car[property].split(" ");
+      nameArr.forEach((element, index, arr) => {
+        arr[index] = element[0].toUpperCase() + element.slice(1);
+      });
+      chips.push(
+        <Chip key={property} label={`${property}: ${nameArr.join(" ")}`} />
+      );
+    } else {
+      chips.push(
+        <Chip key={property} label={`${property}: ${car[property]}`} />
+      );
+    }
   }
 
   return (
