@@ -6,11 +6,7 @@ import Router from "./Router";
 // import { BrowserRouter } from "react-router-dom";
 
 // test
-import Home from "./components/Home";
-
-// <BrowserRouter>
-//   <Router />
-// </BrowserRouter>;
+// import Home from "./components/Home";
 
 function App() {
   return (
